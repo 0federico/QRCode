@@ -4,7 +4,7 @@ import qrcode
 import optparse
 
 def generaQR(messaggio,file,dimensione,border,version,errorcorrectinglevel):
-    qr = qrcode.QRCode(version=version,box_size=dimensione,border=border,error_correction=errorcorrectinglevel) # box_size indica il numero di pixel necessari per formare un quadrato di informazione
+    qr = qrcode.QRCode(version=version,box_size=dimensione,border=border,error_correction=errorcorrectinglevel)
     qr.add_data(messaggio)
     qr.make(fit=True)
     img = qr.make_image(fill='black',back_color='white')
